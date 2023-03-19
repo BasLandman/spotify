@@ -2,23 +2,22 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+
 function App() {
+  let spotify_id = process.env.REACT_APP_SPOTIFY_CLIENT_ID
+  let spotify_secret = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+    <p className="text-4xl underline">
+    {spotify_secret}
+    </p>
+    <p className="italic ...">
+    {spotify_id}
+    </p>
+
     </div>
   );
 }
